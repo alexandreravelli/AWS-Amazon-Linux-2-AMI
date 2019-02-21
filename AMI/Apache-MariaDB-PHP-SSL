@@ -46,3 +46,4 @@ sudo openssl ecparam -name prime256v1 -out custom.key -genkey
 sudo chown root:root custom.key
 sudo chmod 600 custom.key
 ls -al custom.key
+sudo openssl req -new -key custom.key -out csr.pem
