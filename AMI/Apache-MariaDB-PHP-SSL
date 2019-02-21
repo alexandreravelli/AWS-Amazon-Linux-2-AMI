@@ -28,3 +28,5 @@ wget https://www.phpmyadmin.net/downloads/phpMyAdmin-latest-all-languages.tar.gz
 tar -xvzf phpMyAdmin-latest-all-languages.tar.gz
 rm phpMyAdmin-latest-all-languages.tar.gz
 sudo systemctl start mariadb
+
+http://my.public.dns.amazonaws.com/phpMyAdmin
