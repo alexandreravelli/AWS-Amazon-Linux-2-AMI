@@ -40,4 +40,6 @@ sudo yum install -y mod_ssl
 Redémarrez votre instance et reconnectez-la. 
 sudo systemctl restart httpd
 cd /etc/pki/tls/private/
+sudo openssl genrsa -out custom.key 4096
+sudo openssl genrsa -aes128 -passout pass:*abcde12345* -out custom.key 4096
 
