@@ -6,6 +6,7 @@ Apache
 MariaDB
 PHP
 SSL/TLS 
+SSH-2-ECDSA
 
 sudo yum update -y
 sudo amazon-linux-extras install -y lamp-mariadb10.4-php7.2 php7.2
