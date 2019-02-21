@@ -42,4 +42,7 @@ sudo systemctl restart httpd
 cd /etc/pki/tls/private/
 sudo openssl genrsa -out custom.key 4096
 sudo openssl genrsa -aes128 -passout pass:*abcde12345* -out custom.key 4096
-
+sudo openssl ecparam -name prime256v1 -out custom.key -genkey
+sudo chown root:root custom.key
+sudo chmod 600 custom.key
+ls -al custom.key
