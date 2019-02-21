@@ -31,3 +31,13 @@ rm phpMyAdmin-latest-all-languages.tar.gz
 sudo systemctl start mariadb
 
 http://my.public.dns.amazonaws.com/phpMyAdmin
+
+
+//SSL//
+
+sudo systemctl is-enabled httpd
+sudo yum install -y mod_ssl
+Redémarrez votre instance et reconnectez-la. 
+sudo systemctl restart httpd
+cd /etc/pki/tls/private/
+
