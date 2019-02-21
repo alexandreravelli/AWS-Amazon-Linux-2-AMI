@@ -5,7 +5,6 @@ https://downloads.mariadb.org/mariadb/+releases/
 Apache
 MariaDB
 PHP
-SSL/TLS 
 
 sudo yum update -y
 sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
@@ -31,19 +30,3 @@ rm phpMyAdmin-latest-all-languages.tar.gz
 sudo systemctl start mariadb
 
 http://my.public.dns.amazonaws.com/phpMyAdmin
-
-
-//SSL//
-
-sudo systemctl is-enabled httpd
-sudo yum install -y mod_ssl
-Redémarrez votre instance et reconnectez-la. 
-sudo systemctl restart httpd
-cd /etc/pki/tls/private/
-sudo openssl genrsa -out custom.key 4096
-sudo openssl genrsa -aes128 -passout pass:*abcde12345* -out custom.key 4096
-sudo openssl ecparam -name prime256v1 -out custom.key -genkey
-sudo chown root:root custom.key
-sudo chmod 600 custom.key
-ls -al custom.key
-sudo openssl req -new -key custom.key -out csr.pem
