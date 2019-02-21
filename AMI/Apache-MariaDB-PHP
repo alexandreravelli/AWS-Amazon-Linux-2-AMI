@@ -1,0 +1,15 @@
+http://php.net/releases/
+https://downloads.mariadb.org/mariadb/+releases/
+
+Apache
+MariaDB
+PHP
+SSL/TLS 
+
+
+sudo yum update -y
+sudo amazon-linux-extras install -y lamp-mariadb10.4-php7.2 php7.2
+sudo yum install -y httpd mariadb-server
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo usermod -a -G apache ec2-user
