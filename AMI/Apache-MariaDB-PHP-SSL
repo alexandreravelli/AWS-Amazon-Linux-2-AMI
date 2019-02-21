@@ -1,6 +1,6 @@
 http://php.net/releases/
 https://downloads.mariadb.org/mariadb/+releases/
-sudo apt-get upgrade
+
 
 Apache
 MariaDB
